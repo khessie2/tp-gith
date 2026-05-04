@@ -11,6 +11,16 @@ const itemsList = document.getElementById('items');
 const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 
+const detailTitle = document.getElementById('detailTitle');
+const detailDesc = document.getElementById('detailDesc');
+const detailStatus = document.getElementById('detailStatus');
+
+
+function showDetails(task) {
+    detailTitle.textContent = task.title;
+    detailDesc.textContent = task.description;
+    detailStatus.textContent = task.done ? "Faite" : "Non faite";
+}
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
@@ -22,6 +32,8 @@ function renderTasks() {
         const li = document.createElement('li');
         li.className = 'task-item';
         li.textContent = task.title;
+
+        
 
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Supprimer';

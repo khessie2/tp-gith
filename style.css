@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.todo-list, .task-details {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.task-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-item:hover { background-color: #f9f9f9; }
+
+.done { text-decoration: line-through; color: gray; }
